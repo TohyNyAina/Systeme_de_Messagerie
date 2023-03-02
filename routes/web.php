@@ -23,3 +23,4 @@ Auth::routes();
 Route::get('/home', [ConversationsController::class, 'index'])->name('home');
 Route::get('/conversations',[ConversationsController::class, 'index'])->name('conversations');
 Route::get('/conversations/{user}', [ConversationsController::class, 'show'])->name('conversations.show');
+Route::post('/conversations/{user}', [ConversationsController::class, 'store']);
